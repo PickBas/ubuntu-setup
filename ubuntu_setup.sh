@@ -16,16 +16,7 @@ sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt update; sudo apt install git -y
 
 # Toolbox
-mkdir toolbox
-cd toolbox
-wget https://www.jetbrains.com/toolbox-app/download/download-thanks.html?platform=linux
-tar xfz ./jetbrains*.gz
-rm ./jet*.gz
-cd ./jet*
-./?*
-cd ..
-cd ..
-rm -r toolbox
+sudo snap install toolbox
 
 # gcc/g++
 sudo apt install gcc g++ -y
@@ -43,3 +34,8 @@ sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt-get update
 sudo apt-get install sublime-text -y
+
+# Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+rm ./google-chrome-stable_current_amd64.deb
